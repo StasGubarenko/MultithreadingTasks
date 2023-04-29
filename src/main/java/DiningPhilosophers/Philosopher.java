@@ -1,14 +1,13 @@
-package Мусор;
+package DiningPhilosophers;
 
 import java.util.concurrent.Semaphore;
 
-public class Philosoph extends Thread{
-
+public class Philosopher extends Thread {
     Semaphore table;
     String name;
     int id;
 
-    public Philosoph(Semaphore table, String name, int id){
+    public Philosopher(Semaphore table, String name, int id){
         this.table = table;
         this.name = name;
         this.id = id;
@@ -28,6 +27,7 @@ public class Philosoph extends Thread{
         }
 
         System.out.println(name + " is sitting at the table");
+        System.out.println(name + " is dining at the table");
 
         //"Философ" обедает
         try {

@@ -11,7 +11,7 @@ public class Philosopher extends Thread {
         this.table = table;
         this.name = name;
         this.id = id;
-        //Изучить конструктор класса thread
+        
         new Thread(this).start();
     }
 
